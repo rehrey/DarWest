@@ -218,8 +218,7 @@
                                                                     @endforeach
                                                                 </select>
 
-                                                            <a href="#"
-                                                                class="btn-secondary btn ml-2 white pt-1 pb-1 d-flex align-items-center justify-content-center med_purchase">ADD</a>
+                                                            <button class="btn-secondary btn ml-2 white pt-1 pb-1 d-flex align-items-center justify-content-center med_purchase">ADD</button>
                                                         </fieldset>
                                                     </div>
                                                     <div class="col-12">
@@ -251,7 +250,7 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody class="purchaseArray">
-                                                                    <tr class="">
+                                                                    {{-- <tr class="">
 
                                                                         <td class="" name="medicine">Mackbook</td>
                                                                         <td class=" text-center">
@@ -289,7 +288,7 @@
                                                                             </a>
                                                                         </td>
 
-                                                                    </tr>
+                                                                    </tr> --}}
                                                                     
                                                                 </tbody>
                                                                 <tfoot>
@@ -589,55 +588,40 @@
 		});
 
 
-//         $(document).ready(function(){
-//         //Add item
-//         $("a.med_purchase").click(function(){
-//           $(".purchaseArray").append("<li>Lorem Ipsum <a href='javascript:void(0);' class='delete'>×</a></li>"); 
-//         });
-//         //Delete item
-//         $(document).on("click", "a.delete" , function() {
-//           $(this).parent().remove();
-//         });
-// });
-		
-
-
 
 $(document).ready(function () {
             $(".med_purchase").click(function () {
-                markup = '
-<tr class=""> <td class="" name="medicine">Mackbook</td>'+'
-<td class=" text-center">'+'
-    <input type="number" class="form-control" '+'
+                console.log('shinanoganz1');   
+            //    var op = '<tr class=""> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '<td class="" name="medicine">Mackbook</td> '+
+            //     '</tr>';
+                var op='<tr class=""> <td class="" name="medicine">Mackbook</td> '+
+                '<td class=" text-center"><input type="number" class="form-control" placeholder="Batch ID" value="0" name="batch_no"> </td> '+
+                '<td class=" text-center"> <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no"></td> '+
+                '<td class=" "> 0 </td> <td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td> '+
+                '<td class=" text-center">  <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="2" name="box_qty"> '+
+                '</td> <td class="  text-center"> <input type="text" class="form-control"  id="basicInput3" placeholder="Enter Purchased Quantity" value="200" name="buy_price"> </td> '+
+                '<td class="">192.00</td> <td class="" name="subtotal_price">192.00</td> '+
+                '<td class="text-right"> <a href="#" class="confirm-delete" title="Delete"> <i class="fas fa-trash-alt"></i> </a> </td> '+
+                '</tr>';
 
-        placeholder="Batch ID" value="0" name="batch_no"> '+'
-</td> '+'
-<td class=" text-center"> '+'
-    <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no"> '+'
-</td> '+'
-<td class=" "> 300 </td>  '+'
-<td class=" text-center">  '+'
-    <input type="number" class="form-control"  id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td>  '+'
-<td class=" text-center">   '+'
-    <input type="number" class="form-control"  id="basicInput1"  placeholder="Enter Buying price" value="2" name="box_qty">  '+'
-</td>   '+'
-<td class="  text-center">  '+'
-    <input type="text" class="form-control"  id="basicInput3"  placeholder="Enter Purchased Quantity" value="200" name="buy_price">  '+'
-</td>  '+'
-<td class="">192.00</td>  '+'
-<td class="" name="subtotal_price">192.00</td>  '+'
-<td class="text-right">  '+'
-    <a href="#" class="confirm-delete" title="Delete">  '+'
-        <i class="fas fa-trash-alt"></i>   </a>   '+'
-</td>  '+'
-
-</tr>';
-                tableBody = $('table tbody');
-                tableBody.append(markup);
-               
+            // $('.purchaseArray').html(" ");
+            $('.purchaseArray').append(op);
+            console.log('shinanoganz2');  
             });
         }); 
-                    </script>
+
+
+                                </script>
                 @stop
 </body>
 <!--end::Body-->

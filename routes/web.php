@@ -190,6 +190,9 @@ Route::get('delete_location/{id}',[LocationController::class ,'delete_location']
 //---------------check purchase order -------------
 Route::get('check_purchase',[PurchaseController::class ,'add_purchase'])->name('check_purchase');
 
+//---------------fetch medicines  -------------
+Route::get('fetch_saleprice',[PurchaseController::class ,'fetch_saleprice'])->name('fetch_saleprice');
+
 // -------------add purchase order-------------- 
 Route::post('add_purchase',[PurchaseController::class ,'add_purchase'])->name('add_purchase');
 
