@@ -209,11 +209,11 @@
                                                         <fieldset class="form-group mb-3 d-flex">
                                        
                                                             <select
-                                                                    class="js-example-basic-single js-states form-control bg-transparent"
+                                                                    class="js-example-basic-single js-states form-control bg-transparent medicine_id"
                                                                     name="status">
                                                                     @foreach ( $medicines as $medicine)
                                                                    
-                                                                    <option>{{ $medicine->name }}</option>
+                                                                    <option value="{{ $medicine->id }}">{{ $medicine->name }}</option>
         
                                                                     @endforeach
                                                                 </select>
@@ -589,9 +589,28 @@
 
 
 
-$(document).ready(function () {
+// $(document).ready(function () {
+    $(document).on('change','.medicine_id',function(){
+        var medicine_id=$(this).val();
+
+        
             $(".med_purchase").click(function () {
+
+                
+
                 console.log('shinanoganz1');   
+        $.ajax({
+        type:'get', //request type "Get" or "Post"
+        url:'{!! URL::to('fetch_saleprice') !!}', //URL to load the data
+        data:{'id':medicine_id,
+                'name':}, //Id of trigger drop down menu Imooo
+        success:function(data){
+            var medicine=data;
+            console.log(medicine);
+            if(medicine.length==0){ //if check if data variable is empty
+                op+='';
+            }
+            else{
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
@@ -604,7 +623,8 @@ $(document).ready(function () {
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '</tr>';
-                var op='<tr class=""> <td class="" name="medicine">Mackbook</td> '+
+            for(var i=0;i<medicine.length;i++) {
+                var op='<tr class=""> <td class="" name="medicine">' + medicine[i].name +'</td> '+
                 '<td class=" text-center"><input type="number" class="form-control" placeholder="Batch ID" value="0" name="batch_no"> </td> '+
                 '<td class=" text-center"> <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no"></td> '+
                 '<td class=" "> 0 </td> <td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td> '+
@@ -613,12 +633,19 @@ $(document).ready(function () {
                 '<td class="">192.00</td> <td class="" name="subtotal_price">192.00</td> '+
                 '<td class="text-right"> <a href="#" class="confirm-delete" title="Delete"> <i class="fas fa-trash-alt"></i> </a> </td> '+
                 '</tr>';
-
+                }
             // $('.purchaseArray').html(" ");
             $('.purchaseArray').append(op);
             console.log('shinanoganz2');  
+                }
+        },
+        error:function(){
+
+        },
             });
-        }); 
+       
+    });
+     
 
 
                                 </script>
