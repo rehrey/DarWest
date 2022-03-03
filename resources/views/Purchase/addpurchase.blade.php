@@ -591,14 +591,13 @@
 
 // $(document).ready(function () {
     $(document).on('change','.medicine_id',function(){
-        var institute_id=$(this).val();
+        // var institute_id=$(this).val();
 
         
             $(".med_purchase").click(function () {
 
                 
-
-                console.log('shinanoganz1');   
+            console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
