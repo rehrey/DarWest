@@ -213,7 +213,7 @@
                                                                     name="status">
                                                                     @foreach ( $medicines as $medicine)
                                                                    
-                                                                    <option value="{{ $medicine->id }}">{{ $medicine->name }}</option>
+                                                                    <option value="{{ $medicine->id }}" id ="select_medicine">{{ $medicine->name }}</option>
         
                                                                     @endforeach
                                                                 </select>
@@ -594,7 +594,8 @@ $(document).ready(function () {
         
             $(".med_purchase").click(function () {
 
-                
+            var get_selected_medicine=document.getElementById('select_medicine');  
+            const enteredValue = get_selected_medicine.value;
             console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
@@ -608,7 +609,7 @@ $(document).ready(function () {
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '</tr>';
-                var op='<tr class=""> <td class="" name="medicine">Mackbook</td> '+
+                var op='<tr class=""> <td class="" name="medicine">'+ enteredValue +'</td> '+
                 '<td class=" text-center"><input type="number" class="form-control" placeholder="Batch ID" value="0" name="batch_no"> </td> '+
                 '<td class=" text-center"> <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no"></td> '+
                 '<td class=" "> 0 </td> <td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td> '+
