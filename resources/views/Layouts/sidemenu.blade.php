@@ -621,6 +621,65 @@
                                             <div id="accordion3">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
+                                                        <a  class="nav-link sub-nav-link"  data-toggle="collapse" href="#settingA" role="button"
+                                                        aria-expanded="false" aria-controls="settingA">
+                                                        <span class="svg-icon nav-icon d-flex justify-content-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                              </svg>
+                                                        </span>
+                                                            <span class="nav-text">App Settings</span>
+                                                            <i class="fas fa-chevron-right fa-rotate-90"></i>
+                                                        </a>
+                                                        <div class="collapse nav-collapse" id="settingA" data-parent="#accordion3">
+                                                            <ul class="nav flex-column">
+                                                                <li class="nav-item">
+                                                                    <a href="app-setting.html#general" class="nav-link mini-sub-nav-link">
+                                                                    
+                                                                        <span class="nav-text">General</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="{{URL::to('location')}}" class="nav-link mini-sub-nav-link">
+                                                                        
+                                                                        <span class="nav-text">Location</span>
+                                                                    </a>
+                                                                </li>
+                                                                {{-- <li class="nav-item">
+                                                                    <a href="currency.html" class="nav-link sub-nav-link">
+                                                                        <span class="svg-icon nav-icon d-flex justify-content-center">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                                              </svg>
+                                                                        </span>
+                                                                        <span class="nav-text">Currency</span>
+                                                                    </a>
+                                                                </li> --}}
+                                                                <li class="nav-item">
+                                                                    <a href="{{URL::to('paymentmethod')}}" class="nav-link mini-sub-nav-link">
+                                                                        
+                                                                        <span class="nav-text">Payment Methods</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="Tax.html" class="nav-link mini-sub-nav-link">
+                                                                        
+                                                                        <span class="nav-text">Tax Settings</span>
+                                                                    </a>
+                                                                </li>
+                                                                
+                                                                <li class="nav-item">
+                                                                    <a href="app-setting.html#log-sign" class="nav-link mini-sub-nav-link">
+                                                                    
+                                                                        <span class="nav-text">Login/Signup</span>
+                                                                    </a>
+                                                                </li>
+                        
+                                                            
+                                                            </ul>
+                                                        </div>	
+                                                    </li>
+                                                    <li class="nav-item">
                                                         <a  class="nav-link sub-nav-link" data-toggle="collapse" href="#settingB" role="button"
                                                         aria-expanded="false" aria-controls="settingB">
                                                         <span class="svg-icon nav-icon d-flex justify-content-center">
@@ -699,130 +758,16 @@
                                                         <div class="collapse nav-collapse" id="settingW" data-parent="#accordion3">
                                                             <ul class="nav flex-column">
                                                                 <li class="nav-item">
-                                                                    <a href="website-setting.html#general" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">General</span>
-                                                                    </a>
-                                                                </li>
-                        
-                                                                <li class="nav-item">
                                                                     <a href="website-setting.html#themeColor" class="nav-link mini-sub-nav-link">
                                                                     
                                                                         <span class="nav-text">Theming / Colors</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="nav-item">
-                                                                    <a href="website-setting.html#SEO" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">SEO</span>
-                                                                    </a>
-                                                                </li>
-                        
-                                                                <li class="nav-item">
-                                                                    <a href="website-setting.html#log-sign" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Login / SignUp</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a href="website-setting.html#slider" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Slider</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a href="Menu-bulider.html" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Menu Builder</span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>	
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a  class="nav-link sub-nav-link"  data-toggle="collapse" href="#settingA" role="button"
-                                                        aria-expanded="false" aria-controls="settingA">
-                                                        <span class="svg-icon nav-icon d-flex justify-content-center">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                              </svg>
-                                                        </span>
-                                                            <span class="nav-text">App Settings</span>
-                                                            <i class="fas fa-chevron-right fa-rotate-90"></i>
-                                                        </a>
-                                                        <div class="collapse nav-collapse" id="settingA" data-parent="#accordion3">
-                                                            <ul class="nav flex-column">
-                                                                <li class="nav-item">
-                                                                    <a href="app-setting.html#general" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">General</span>
-                                                                    </a>
-                                                                </li>
-                        
-                                                                <li class="nav-item">
-                                                                    <a href="app-setting.html#display" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Display In Menu/Sidebar</span>
-                                                                    </a>
-                                                                </li>
                                                                 
-                                                                <li class="nav-item">
-                                                                    <a href="app-setting.html#notificationS" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Local Notification</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a href="app-setting.html#log-sign" class="nav-link mini-sub-nav-link">
-                                                                    
-                                                                        <span class="nav-text">Login/Signup</span>
-                                                                    </a>
-                                                                </li>
-                        
-                                                            
                                                             </ul>
                                                         </div>	
                                                     </li>
-                                                    <li class="nav-item">
-                                                        <a href="{{URL::to('location')}}" class="nav-link sub-nav-link">
-                                                            <span class="svg-icon nav-icon d-flex justify-content-center">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                                  </svg>
-                                                            </span>
-                                                            <span class="nav-text">Location</span>
-                                                        </a>
-                                                    </li>
-                                                    {{-- <li class="nav-item">
-                                                        <a href="currency.html" class="nav-link sub-nav-link">
-                                                            <span class="svg-icon nav-icon d-flex justify-content-center">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                                  </svg>
-                                                            </span>
-                                                            <span class="nav-text">Currency</span>
-                                                        </a>
-                                                    </li> --}}
-                                                    <li class="nav-item">
-                                                        <a href="{{URL::to('paymentmethod')}}" class="nav-link sub-nav-link">
-                                                            <span class="svg-icon nav-icon d-flex justify-content-center">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                                  </svg>
-                                                            </span>
-                                                            <span class="nav-text">Payement Methods</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="Tax.html" class="nav-link sub-nav-link">
-                                                            <span class="svg-icon nav-icon d-flex justify-content-center">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                                  </svg>
-                                                            </span>
-                                                            <span class="nav-text">Tax Settings</span>
-                                                        </a>
-                                                    </li>
+                                                
                                                 </ul>
                                             </div>
                                         </div>

@@ -152,7 +152,8 @@
                                                             <fieldset class="form-group mb-3">
                                                                 <select
                                                                     class="js-example-basic-single js-states form-control bg-transparent"
-                                                                    name="supplier">
+                                                                    name="supplier" required>
+                                                                    <option>Select Supplier</option>
                                                                    @foreach ($suppliers as $supplier)
                                                                    <option >{{ $supplier->name }}</option>                                                                       
                                                                    @endforeach
@@ -166,7 +167,7 @@
                                                                 <select
                                                                     class="js-example-basic-single js-states form-control bg-transparent"
                                                                     name="status">
-                                                                    <option value="WY">Received</option>
+                                                                    <option value="Received">Received</option>
                                                                 </select>
                                                             </fieldset>
                                                         </div>
@@ -177,6 +178,7 @@
                                                                 <select
                                                                     class="js-example-basic-single js-states form-control bg-transparent"
                                                                     name="payment_method">
+                                                                    <option>Select Payment Method</option>
                                                                     @foreach ( $paymentmethods as $paymentmethod)
                                                                    
                                                                     <option>{{ $paymentmethod->name }}</option>
@@ -189,7 +191,7 @@
                                                             <label class="text-body">Attach Document</label>
                                                             <fieldset class="form-group mb-3 border-dark rounded p-1">
                                                                 <input type="file" class="d-block w-100" id="img"
-                                                                    name="img" accept="image/*">
+                                                                    name="img" accept="image/*" multiple>
                                                             </fieldset>
                                                         </div>
                                                         
@@ -209,13 +211,11 @@
                                                         <fieldset class="form-group mb-3 d-flex">
                                        
                                                             <select
-                                                                    class="js-example-basic-single js-states form-control bg-transparent" id="medicine_id"
+                                                                    class="js-example-basic-single js-states form-control bg-transparent"
                                                                     name="status">
+                                                                    <option value="">select medicine</option>
                                                                     @foreach ( $medicines as $medicine)
-                                                                   
-                                                                    <option value="{{ $medicine->id }}" id="select_medicine">{{ $medicine->name }}</option>
-                                                                    
-        
+                                                                   <option id="select_medicine">{{ $medicine->name }}</option>
                                                                     @endforeach
                                                                 </select>
 
@@ -569,6 +569,7 @@ $(document).ready(function () {
             
 
                 success:function(data){
+
                     var med_price=data;
                     console.log(med_price);
 
@@ -580,7 +581,7 @@ $(document).ready(function () {
                 '<td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Box size" value="100" name="box_size"> </td> '+
                 '<td class=" text-center">  <input type="number" class="form-control" id="basicInput1" placeholder="Enter Box qty" value="2" name="box_qty"> </td> '+
                 '<td class="  text-center"> <input type="text" class="form-control"  id="basicInput3" placeholder="Enter Purchased Quantity" value="200" name="buy_price"> </td> '+
-                '<td class="" id="">'+ med_price.sell_price + '</td> '+
+                '<td class="" id="">'+ med_price + '</td> '+
                 '<td class="" name="subtotal_price">192.00</td> '+
                 '<td class="text-right"> <a href="#" class="confirm-delete" title="Delete"> <i class="fas fa-trash-alt"></i> </a> </td> '+
                 '</tr>';

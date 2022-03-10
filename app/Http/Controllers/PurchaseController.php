@@ -114,7 +114,7 @@ class PurchaseController extends Controller
 
     public function fetch_saleprice($id){
         // $decode_med_id=\base64_decode($request);
-        $data=Medicine::find($id)->get();
+        $data=Medicine::where('id', $id)->get('sell_price');
         return response()->json($data);// Then send this data to ajax success function
        
     }
