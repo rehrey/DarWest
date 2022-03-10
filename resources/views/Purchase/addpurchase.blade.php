@@ -596,7 +596,7 @@ $(document).ready(function () {
                 const inputEl = document.querySelector('option');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
-            const enteredValue = get_selected_medicine.value;
+            const enteredValue = inputEl.value;
             console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
