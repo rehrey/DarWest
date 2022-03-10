@@ -554,19 +554,20 @@ $(document).ready(function () {
     // $(document).on('change','.medicine_id',function(){
         
             $(".med_purchase").click(function () {
-                var med_id=$(this).val();
-                const inputEl = document.querySelector('#select_medicine');
+                // var med_id=$(this).val();
+            const inputEl = document.querySelector('#select_medicine');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
             const enteredValue = inputEl.text;
-           
+            const med_id = inputEl.val();
+
             console.log('shinanoganz1'); 
             
-            $.ajax({type:'get', url:'{!! URL::to('fetch_saleprice') !!}', //URL to load the data
+            // $.ajax({type:'get', url:'{!! URL::to('fetch_saleprice') !!}', //URL to load the data
                 
-            data:{'id': med_id}, 
+            // data:{'id': med_id}, 
 
-                success:function(data){
+            //     success:function(data){
 
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
@@ -594,10 +595,10 @@ $(document).ready(function () {
             // $('.purchaseArray').html(" ");
             $('.purchaseArray').append(op);
             console.log('shinanoganz2');  
-                },
-                error:function(){
-                },
-            });
+            //     },
+            //     error:function(){
+            //     },
+            // });
 
             });
         }); 
