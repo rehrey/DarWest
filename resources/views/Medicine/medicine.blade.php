@@ -296,7 +296,7 @@
                                                                                                 </div>
                                                                                                 <div class="modal-body">
                                                                                                     <form id="myform"
-                                                                                                        method="POST"
+                                                                                                        method="post"
                                                                                                         action="{{ URL::to('upd_medicine') }}">
                                                                                                         @csrf
                                                                                                         <div
@@ -381,7 +381,7 @@
                                                                                                                         class="form-group">
                                                                                                                         <select
                                                                                                                             class="rounded form-control bg-transparent"
-                                                                                                                            name="state">
+                                                                                                                            name="unit">
                                                                                                                             <option
                                                                                                                                 value="{{ $medicine->unit }}"
                                                                                                                                 selected>
@@ -472,8 +472,7 @@
                                                                                                             <div
                                                                                                                 class="modal-footer">
 
-                                                                                                                <a class="btn btn-primary"
-                                                                                                                    type="submit">Submit</a>
+                                                                                                                <button type="submit" class="btn btn-primary">Submit</button>
 
                                                                                                             </div>
                                                                                                         </div>
