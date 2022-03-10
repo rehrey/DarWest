@@ -222,7 +222,7 @@
                                                                                     {{ $medicine->type }}
                                                                                 </td>
                                                                                 <td>
-                                                                                    {{ $medicine->Unit }}
+                                                                                    {{ $medicine->unit }}
                                                                                 </td>
                                                                                 <td>
                                                                                     {{ $medicine->sell_price }}
