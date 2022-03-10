@@ -213,7 +213,7 @@
                                                                     name="status">
                                                                     @foreach ( $medicines as $medicine)
                                                                    
-                                                                    <option value="{{ $medicine->id }}" id ="select_medicine">{{ $medicine->name }}</option>
+                                                                    <option value="{{ $medicine->id }}" id="select_medicine">{{ $medicine->name }}</option>
         
                                                                     @endforeach
                                                                 </select>
@@ -593,10 +593,13 @@ $(document).ready(function () {
     // $(document).on('change','.medicine_id',function(){
         
             $(".med_purchase").click(function () {
+            
                 const inputEl = document.querySelector('#select_medicine');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
-            const enteredValue = inputEl.value;
+            // const enteredValue = inputEl.value;
+            .call(inputEl.options, option => option.selected)
+            .map(option => option.text);
             console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
