@@ -559,7 +559,7 @@ $(document).ready(function () {
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
             const enteredValue = inputEl.text;
-            var med_id = inputEl.val();
+            const med_id = inputEl.val();
 
             console.log('shinanoganz1'); 
             
