@@ -593,8 +593,9 @@ $(document).ready(function () {
     // $(document).on('change','.medicine_id',function(){
         
             $(".med_purchase").click(function () {
+                const inputEl = document.querySelector('option');
 
-            var get_selected_medicine=document.getElementById('select_medicine');  
+            // var get_selected_medicine=document.getElementById('select_medicine');  
             const enteredValue = get_selected_medicine.value;
             console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
