@@ -213,7 +213,7 @@
                                                                     name="status">
                                                                     @foreach ( $medicines as $medicine)
                                                                    
-                                                                    <option value="{{ $medicine->id }}" id="select_medicine">{{ $medicine->name }}</option>
+                                                                    <option value="{{ $medicine->id }}" id="select_medicine ">{{ $medicine->name }}</option>
         
                                                                     @endforeach
                                                                 </select>
@@ -250,45 +250,6 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody class="purchaseArray">
-                                                                    {{-- <tr class="">
-
-                                                                        <td class="" name="medicine">Mackbook</td>
-                                                                        <td class=" text-center">
-                                                                            <input type="number" class="form-control"
-                    
-                                                                                placeholder="Batch ID" value="0" name="batch_no">
-                                                                        </td>
-                                                                        <td class=" text-center">
-                                                                            <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no">
-                                                                        </td>
-                                                                        <td class=" ">
-                                                                            300
-                                                                        </td>
-                                                                        <td class=" text-center">
-                                                                            <input type="number" class="form-control"
-                                                                                id="basicInput1"
-                                                                                placeholder="Enter Buying price" value="100" name="box_size">
-                                                                        </td>
-                                                                        <td class=" text-center">
-                                                                            <input type="number" class="form-control"
-                                                                                id="basicInput1"
-                                                                                placeholder="Enter Buying price" value="2" name="box_qty">
-                                                                        </td>
-                                                                        <td class="  text-center">
-                                                                            <input type="text" class="form-control"
-                                                                                id="basicInput3"
-                                                                                placeholder="Enter Purchased Quantity" value="200" name="buy_price">
-                                                                        </td>
-                                                                        <td class="">192.00</td>
-                                                                        <td class="" name="subtotal_price">192.00</td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="confirm-delete"
-                                                                                title="Delete">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </a>
-                                                                        </td>
-
-                                                                    </tr> --}}
                                                                     
                                                                 </tbody>
                                                                 <tfoot>
@@ -597,9 +558,8 @@ $(document).ready(function () {
                 const inputEl = document.querySelector('#select_medicine');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
-            // const enteredValue = inputEl.value;
-            .call(inputEl.options, option => option.selected)
-            .map(option => option.text);
+            const enteredValue = inputEl.text;
+           
             console.log('shinanoganz1');   
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
