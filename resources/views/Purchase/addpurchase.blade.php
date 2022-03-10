@@ -593,7 +593,7 @@ $(document).ready(function () {
     // $(document).on('change','.medicine_id',function(){
         
             $(".med_purchase").click(function () {
-                const inputEl = document.querySelector('#select_medicine option');
+                const inputEl = document.querySelector('#select_medicine option:checked');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
             const enteredValue = inputEl.value;
