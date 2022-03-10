@@ -113,7 +113,8 @@ class PurchaseController extends Controller
     }
 
     public function fetch_saleprice(Request $request){
-        $data=Medicine::where(['med_id'=>$request->id])->get();
+        // $decode_med_id=\base64_decode($request);
+        $data=Medicine::find($request)->get();
         return response()->json($data);// Then send this data to ajax success function
        
     }
