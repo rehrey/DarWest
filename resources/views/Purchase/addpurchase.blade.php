@@ -213,7 +213,7 @@
                                                                     name="status">
                                                                     @foreach ( $medicines as $medicine)
                                                                    
-                                                                    <option value="{{ $medicine->id }}" id="select_medicine ">{{ $medicine->name }}</option>
+                                                                    <option value="{{ $medicine->id }}" id="select_medicine">{{ $medicine->name }}</option>
         
                                                                     @endforeach
                                                                 </select>
