@@ -113,8 +113,8 @@ class PurchaseController extends Controller
     }
 
     public function fetch_saleprice(Request $request){
-        $medicine=Medicine::where(['medicine_id'=>$request->id])->get();
-        return response()->json($medicine);// Then send this data to ajax success function
+        $data=Medicine::where(['med_id'=>$request->id])->get();
+        return response()->json($data);// Then send this data to ajax success function
        
     }
 }

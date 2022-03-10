@@ -554,13 +554,20 @@ $(document).ready(function () {
     // $(document).on('change','.medicine_id',function(){
         
             $(".med_purchase").click(function () {
-            
+                var med_id=$(this).val();
                 const inputEl = document.querySelector('#select_medicine');
 
             // var get_selected_medicine=document.getElementById('select_medicine');  
             const enteredValue = inputEl.text;
            
-            console.log('shinanoganz1');   
+            console.log('shinanoganz1'); 
+            
+            $.ajax({type:'get', url:'{!! URL::to('fetch_saleprice') !!}', //URL to load the data
+                
+            data:{'id': med_id}, 
+
+                success:function(data){
+
             //    var op = '<tr class=""> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '<td class="" name="medicine">Mackbook</td> '+
@@ -574,11 +581,12 @@ $(document).ready(function () {
             //     '<td class="" name="medicine">Mackbook</td> '+
             //     '</tr>';
                 var op='<tr class=""> <td class="" name="medicine">'+ enteredValue +'</td> '+
-                '<td class=" text-center"><input type="number" class="form-control" placeholder="Batch ID" value="0" name="batch_no"> </td> '+
+                '<td class=" text-center"><input type="text" class="form-control" placeholder="Batch ID" value="0" name="batch_no"> </td> '+
                 '<td class=" text-center"> <input type="date" name="date" class="form-control datepicker mb-3" name="batch_no"></td> '+
-                '<td class=" "> 0 </td> <td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td> '+
-                '<td class=" text-center">  <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="2" name="box_qty"> '+
-                '</td> <td class="  text-center"> <input type="text" class="form-control"  id="basicInput3" placeholder="Enter Purchased Quantity" value="200" name="buy_price"> </td> '+
+                '<td class=" "> 0 </td> '+ 
+                '<td class=" text-center"> <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="100" name="box_size"> </td> '+
+                '<td class=" text-center">  <input type="number" class="form-control" id="basicInput1" placeholder="Enter Buying price" value="2" name="box_qty"> </td> '+
+                '<td class="  text-center"> <input type="text" class="form-control"  id="basicInput3" placeholder="Enter Purchased Quantity" value="200" name="buy_price"> </td> '+
                 '<td class="">192.00</td> <td class="" name="subtotal_price">192.00</td> '+
                 '<td class="text-right"> <a href="#" class="confirm-delete" title="Delete"> <i class="fas fa-trash-alt"></i> </a> </td> '+
                 '</tr>';
@@ -586,6 +594,11 @@ $(document).ready(function () {
             // $('.purchaseArray').html(" ");
             $('.purchaseArray').append(op);
             console.log('shinanoganz2');  
+                },
+                error:function(){
+                },
+            });
+
             });
         }); 
         </script>
