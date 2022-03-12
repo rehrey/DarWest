@@ -55,6 +55,7 @@ class PageController extends Controller
         $categories=Category::all();
         $types=Type::all();
         $units=Unit::all();
+        
 
         return view ('Medicine.medicine')->with(
             [

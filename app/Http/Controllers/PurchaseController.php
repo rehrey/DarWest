@@ -65,7 +65,7 @@ class PurchaseController extends Controller
     public function upd_purchase(Request $purchase_upd){
        
          $decode_purchase_id=\base64_decode($purchase_upd->id);
-        //  dd($decode_med_id);
+        //  x
 
         // dd($med_upd->all());
 
@@ -112,10 +112,12 @@ class PurchaseController extends Controller
     
     }
 
-    public function fetch_saleprice($id){
+    public function fetch_saleprice(Request $request){
         // $decode_med_id=\base64_decode($request);
-        $data=Medicine::where('id', $id)->get('sell_price');
-        return response()->json($data);// Then send this data to ajax success function
+
+        $Medicine_detail=Medicine::where(['id'=>$request->id] )->first();
+
+        return response()->json($Medicine_detail);// Then send this data to ajax success function
        
     }
 }
